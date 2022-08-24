@@ -1,6 +1,6 @@
 <template>
     <div class="row py-3 m-auto g-5">
-        <div v-for="n in 5" class="col-lg-2 col-md-6">
+        <div v-for="n in 5" :key="n" class="col-lg-2 col-md-6 align-self-center ">
             <div class="row item-row align-items-center">
                 <div class="col-5 text-end">
                     <i class="bi bi-journal-medical fs-1"></i>
@@ -18,6 +18,7 @@
         </div>
     </div>
 </template>
+
 <style lang="scss" scoped>
 @import '../../assets/styles/commonStyles';
 @import '../../assets/styles/btn';

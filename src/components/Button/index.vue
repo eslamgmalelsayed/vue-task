@@ -6,6 +6,7 @@
 </script>
 
 <style lang="scss" scoped>
+
     @media (max-width:500px){
         button{
             font-size: .4rem;

@@ -1,6 +1,6 @@
 [
     {
-        "orderId": "13242342546456",
+        "orderId": "123",
         "orderType": "مالي",
         "checkType": "كمبيالة",
         "date": "20-10-1994",
@@ -8,27 +8,28 @@
         "person": "محمد خالد أحمد"
     },
     {
-        "order-id": "2",
-        "order-type": "مالي",
-        "Check-type": "كمبيالة",
+        "orderId": "456",
+        "orderType": "مالي",
+        "checkType": "كمبيالة",
         "date": "20-10-1994",
         "court": "المحكمة الجزئية بالرياض",
         "person": "محمد خالد أحمد"
     },
     {
-        "order-id": "3",
-        "order-type": "مالي",
-        "Check-type": "كمبيالة",
+        "orderId": "789",
+        "orderType": "مالي",
+        "checkType": "كمبيالة",
         "date": "20-10-1994",
         "court": "المحكمة الجزئية بالرياض",
         "person": "محمد خالد أحمد"
-    }, 
+    },
     {
-        "order-id": "4",
-        "order-type": "مالي",
-        "Check-type": "كمبيالة",
+        "orderId": "00000",
+        "orderType": "مالي",
+        "checkType": "كمبيالة",
         "date": "20-10-1994",
         "court": "المحكمة الجزئية بالرياض",
         "person": "محمد خالد أحمد"
     }
+    
 ]

@@ -7,7 +7,7 @@
             <h4>التنفيذ</h4>
         </div>
         <div class="col text-end">
-            <Button class="lightGreen"><slot>إدارة الوكلاء</slot></Button>
+            <Button @click="$router.push('/about')" class="lightGreen"><slot>إدارة الوكلاء</slot></Button>
             <Button class="darkGreen"><slot>البيانات الشخصية</slot></Button>
             <Button class="darkYellow"><slot>طلب تنفيذ جديد</slot></Button>
         </div>
@@ -29,9 +29,8 @@ import Button from '@/components/Button/index.vue'
 import Stats from '@/components/Stats/index.vue'
 import SearchArea from '@/components/SearchArea/index.vue'
 import ShowData from '@/components/ShowData/index.vue'
-
 </script>
 
 <style lang="scss" scoped>
-
+@import '@/assets/styles/btn'
 </style>

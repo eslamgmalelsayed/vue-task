@@ -1,7 +1,7 @@
 <template>
   <NavBar />
   <div class="container py-5">
-    <Home />
+  <RouterView />
   </div>
   <Footer />
 </template>
@@ -11,6 +11,7 @@
 import NavBar from '@/components/Layout/NavBar.vue'
 import Home from '@/views/Home/index.vue'
 import Footer from '@/components/Layout/Footer.vue'
+
 </script>
 
 <style scoped lang="scss">
