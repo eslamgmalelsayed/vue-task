@@ -1,5 +1,5 @@
 <template>
-    <div class="row search-area border py-2 m-auto align-items-center g-1">
+    <div class="row search-area border py-2 m-auto align-items-center g-1 my-3">
         <div class="col-lg-4 col-5">
             <select class="form-select shadow-none" aria-label="Default select example">
             <option selected>رقم الطلب</option>
