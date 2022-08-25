@@ -1,121 +1,38 @@
 <template>
     <h4>إدارة الوكلاء</h4>
-    <!--  -->
-    <div class="row py-3">
-        <div class="col-3">
-             <Button @click="handleFirst" class="darkGreen px-5 rounded-2"><slot>وكالات أنت أصدرتها </slot></Button>
+    <!-- tabs -->
+    <div class="row py-3 g-0">
+        <div class="col-lg-4 col-md-5 col">
+             <Button @click="handleFirst" :class="activeClass" class="darkGreen px-5 rounded-2"><slot>وكالات أنت أصدرتها </slot></Button>
         </div>
         <div class="col">
-             <Button @click="handleSecond" class="darkGreen px-5 rounded-2"><slot>وكالات صادرة لك</slot></Button>
+             <Button @click="handleSecond" :class="removeActiveClass" class="darkGreen px-5 rounded-2"><slot>وكالات صادرة لك</slot></Button>
         </div>
     </div>
-<div v-if="showFirst.show" class="yours">
-    <!--  -->
-    <h4>قائمة الوكلاء الحاليين</h4>
-<!--  -->
-    <div class="row justify-content-between align-items-center py-3">
-        <div class="col-3">
-        <select class="form-select shadow-none" aria-label="Default select example">
-        <option selected>Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-        </select>
-        </div>
-        <div class="col-5 text-end">
-            <SearchArea class="text-danger" />
-        </div>
+    <!-- tab one -->
+    <div v-if="showFirst.show">
+    <TabOne />
+    </div>
+    <!-- tab two -->
+    <div v-if="showSecond.show">
+   <TabTwo />
     </div>
     <!--  -->
-    <ShowData />
-    <!--  -->
-    <Button class="btn-dangerr rounded-2 my-3"><slot> اسفاط الوكالة عن الطلبات المحددة</slot></Button>
-    <!--  -->
-    <div class="row justify-content-between align-items-center py-3">
-        <div class="col-3">
-        <Button class="darkGreen px-5 rounded-2"><slot>تفعيل الوكالة لطلب جديد</slot></Button>
-        </div>
-        <div class="col-5 text-end">
-            <SearchArea class="text-danger" />
-        </div>
-    </div>
-    <!--  -->
-    <p class="py-3" style="color:#36C5BA">اسم الوكيل سالم محمود</p>
-    <!--  -->
-    <ShowData />
-    <!--  -->
-    <div class="row py-3">
-        <div class="col">
-        <p>تفعيل الوكالة علي الطلبات</p>
-        </div>
-        <div class="col text-end">
-        <Button class="darkGreen px-5 rounded-2"><slot>تفعيل علي الطلبات المختارة</slot></Button>
-        </div>
-
-    </div>
-    <!--  -->
-    <p class="text-danger fw-bold">* تعليمات تعليمات تعليمات تعليماتتعليمات</p>
-    <p class="text-danger fw-bold">* تعليمات تعليمات تعليمات تعليمات تعليمات</p>
-</div>
-<div v-if="showSecond.show" class="for-you">
-    <!--  -->
-    <h4>قائمة الموكلين الحاليين</h4>
-<!--  -->
-    <div class="row justify-content-between align-items-center py-3">
-        <div class="col-3">
-        <select class="form-select shadow-none" aria-label="Default select example">
-        <option selected>Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-        </select>
-        </div>
-        <div class="col-5 text-end">
-            <SearchArea class="text-danger" />
-        </div>
-    </div>
-    <!--  -->
-    <ShowData />
-    <!--  -->
-    <Button class="btn-dangerr rounded-2 my-3"><slot> اسفاط الوكالة عن الطلبات المحددة</slot></Button>
-    <!--  -->
-    <div class="row justify-content-between align-items-center py-3">
-        <div class="col-3">
-        <Button class="darkGreen px-5 rounded-2"><slot>تفعيل الوكالة لطلب جديد</slot></Button>
-        </div>
-        <div class="col-5 text-end">
-            <SearchArea class="text-danger" />
-        </div>
-    </div>
-    <!--  -->
-    <p class="py-3" style="color:#36C5BA">اسم الوكيل سالم محمود</p>
-    <!--  -->
-    <ShowData />
-    <!--  -->
-    <div class="row py-3">
-        <div class="col">
-        <p>تفعيل الوكالة علي الطلبات</p>
-        </div>
-        <div class="col text-end">
-        <Button class="darkGreen px-5 rounded-2"><slot>تفعيل علي الطلبات المختارة</slot></Button>
-        </div>
-
-    </div>
-    <!--  -->
-    <p class="text-danger fw-bold">* تعليمات تعليمات تعليمات تعليماتتعليمات</p>
-    <p class="text-danger fw-bold">* تعليمات تعليمات تعليمات تعليمات تعليمات</p>
-</div>
-
-    
+    <TabMutual />
+    <!-- <Modal @hideModal="showModal = false" v-if="showModal" /> -->
 </template>
 
 <script setup>
 // imports
 import Button from '@/components/Button/index.vue'
-import SearchArea from '@/components/SearchArea/index.vue'
+import TabOne from '@/components/TabOne/index.vue'
+import TabTwo from '@/components/TabTwo/index.vue'
 import ShowData from '@/components/ShowData/index.vue'
-import {ref, computed, reactive} from 'vue'
-// const show = ref(true)
+import TabMutual from '@/components/TabMutual/index.vue'
+import Modal from '@/components/Modal/index.vue'
+import CusomSearchArea from '@/components/CusomSearchArea/index.vue'
+import {computed, reactive} from 'vue'
+//  handle tab behavior
 const showFirst = reactive({
     show: true,
     class: ''
@@ -132,6 +49,13 @@ const handleSecond = () => {
     showSecond.show = true
     showFirst.show = false
 }
+// active class
+const activeClass = computed(() => {
+    return showFirst.show ? '' : 'activeClass'
+})
+const removeActiveClass = computed(() => {
+    return showSecond.show ? '' : 'activeClass'
+})
 </script>
 
 <style lang="scss" scoped>
@@ -149,5 +73,22 @@ h4{
 }
 .activeClass{
     background: #DBDBDB !important;
+}
+// btn size
+@media(max-width:1024px) {
+    .btn-size{
+        font-size: .5rem;
+    }
+}
+@media(min-width:768px) and (max-width:991px) {
+    .btn-size{
+        font-size: .4rem;
+    }
+}
+@media(max-width:768px) {
+    .btn-size{
+        width: 100%;
+        margin: 1rem;
+    }
 }
 </style>
