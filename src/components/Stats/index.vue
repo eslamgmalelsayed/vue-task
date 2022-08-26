@@ -1,5 +1,5 @@
 <template>
-        <div class="col-xl col-lg-3 col-md-4 col-6">
+        <div class="col-xl col-lg-3 col-md-4 col-6 animate__animated animate__zoomInUp">
             <div class="custom-card py-3 ps-xl-3">
                     <div class="row align-items-xl-start">
                     <div class="col-xl-4 col text-end">

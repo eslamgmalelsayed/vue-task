@@ -1,5 +1,5 @@
 <template>
-     <button :class="[{...props}, 'text-white']"><slot></slot></button>
+     <button :class="[{...props}, 'text-white hvr-float-shadow']"><slot></slot></button>
 </template>
 
 <script setup>
