@@ -12,20 +12,20 @@
             <div class="input-group">
             <input
               v-model="searchBox"
-              @change="handleSearchUsers(searchBox)"
+              @keyup="handleSearchUsers(searchBox)"
               class="form-control border-0 shadow-none"
               aria-describedby="button-addon1"
               aria-label="Example text with button addon"
               placeholder="البحث"
               type="text"
             >
-            <button 
+            <!-- <button 
             @click="handleSearchUsers(searchBox)" 
             class="btn btn-outline-none border-0" 
             type="button" 
             id="button-addon1">
             <i class="bi bi-search"></i>
-            </button>
+            </button> -->
             </div>
         </div>
         <div class="col text-end">
@@ -41,6 +41,10 @@ import { useUsersStore } from '@/stores/users';
 const store = useUsersStore()
 const searchBox = ref()
 const handleSearchUsers = (searchBox) => store.searchUsers(searchBox)
+// const handleSearchUsers = (searchBox) => {
+//     let filtered = store.users.filter( data => data.orderId.includes(searchBox))
+//     console.log(filtered)
+// }
 </script>
 <style scoped lang="scss">
     @media(max-width:455px){

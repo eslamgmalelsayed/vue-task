@@ -5,11 +5,12 @@ export const useUsersStore = defineStore({
     id: 'users',
     state: () => ({
         users: db,
+        filtered: db,
     }),
     actions: {
         // search
         searchUsers(searchBox){
-            this.users = !searchBox ? this.users = db : this.users.filter(user => user.orderId.includes(searchBox))
+            this.filtered = !searchBox ? this.users : this.users.filter(item => item.orderId.includes(searchBox))
         },
         //  delete
         delete(orderId) {
