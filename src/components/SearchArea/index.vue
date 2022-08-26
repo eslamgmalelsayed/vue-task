@@ -19,13 +19,7 @@
               placeholder="البحث"
               type="text"
             >
-            <!-- <button 
-            @click="handleSearchUsers(searchBox)" 
-            class="btn btn-outline-none border-0" 
-            type="button" 
-            id="button-addon1">
-            <i class="bi bi-search"></i>
-            </button> -->
+            <button class="btn btn-outline-none border-0" type="button" id="button-addon1"><i class="bi bi-search"></i></button>
             </div>
         </div>
         <div class="col text-end">

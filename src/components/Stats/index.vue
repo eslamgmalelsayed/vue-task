@@ -1,50 +1,39 @@
 <template>
-    <div class="row py-3 m-auto g-5">
-        <div v-for="n in 5" :key="n" class="col-lg-2 col-md-6 align-self-center ">
-            <div class="row item-row align-items-center">
-                <div class="col-5 text-end">
-                    <i class="bi bi-journal-medical fs-1"></i>
-                </div>
-                <div class="col ps-0">
-                    <p class="fw-bold mb-0 pt-3 fs-4">3251</p>
-                    <p class="desc fw-bold text-muted mb-0">طلباتي</p>
-                    <p class="text-danger mb-1 fw-bold">حدث حدث حدث حدث خطأ</p>
-                </div>  
+        <div class="col-xl col-lg-3 col-md-4 col-6">
+            <div class="custom-card py-3 ps-xl-3">
+                    <div class="row align-items-xl-start">
+                    <div class="col-xl-4 col text-end">
+                        <slot name="icon"></slot>
+                    </div>
+                    <div class="col ps-2 text-lg-start">
+                        <h4 class="mb-0 "><slot name="num"></slot></h4>
+                        <p class="mb-0"> <slot name="desc"></slot></p>
+                        <span class="fw-bold"><slot name="error"></slot></span>
+                    </div>
+                    </div>
             </div>
         </div>
-          <div class="col-lg-2 col-md-6 text-center diff-div pt-3">
-            <p class="mb-0"><i class="bi bi-journal-medical fs-1"></i></p>
-            <p class="mb-0">الاحصائيات</p>
-        </div>
-    </div>
 </template>
+
+<script setup>
+
+</script>
 
 <style lang="scss" scoped>
 @import '../../assets/styles/commonStyles';
-@import '../../assets/styles/btn';
-.diff-div{
-    background: #FAF9F3;
-    i{
-        color: #D1BD7D;
-    }
-}
-.item-row{
-    border: 2px solid $borderColor;
+.custom-card{
+    border: 1px solid $lightGreen;
     background: #F7FBFB;
+    min-height: 125px;
     i{
-        color: $borderColor;
+        color: $lightGreen;
     }
-    .col{
-        overflow: hidden;
-        text-overflow: ellipsis;
-        .desc{
-            font-size: .8rem;
-            white-space: nowrap;
-        }
-        .text-danger{
-            font-size: .6rem;
-            white-space: pre-wrap;
-        }
+    p{
+        color: $mainColor;
+    }
+    span{
+        color: $redColor;
+        font-size: 10px;
     }
 }
 </style>

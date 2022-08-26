@@ -59,7 +59,6 @@ const removeActiveClass = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/styles/btn';
 h4{
     color: #1D4B52;
 }

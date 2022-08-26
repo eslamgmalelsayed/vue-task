@@ -3,17 +3,58 @@
     <BreadCrumb />
     <!-- btns row start -->
     <div class="row py-3">
-        <div class="col-1">
+        <div class="col-lg-1 col-md-2 text-md-start text-center">
             <h4>التنفيذ</h4>
         </div>
-        <div class="col text-end">
-            <Button @click="$router.push('/about')" class="lightGreen"><slot>إدارة الوكلاء</slot></Button>
-            <Button class="darkGreen"><slot>البيانات الشخصية</slot></Button>
-            <Button class="darkYellow"><slot>طلب تنفيذ جديد</slot></Button>
+        <div class="col-lg col-md text-md-end text-center">
+            <div class="row justify-content-xl-end justify-content-md-evenly">
+                <div class="col-md-2 col">
+                <Button :darkGreen="true" @click="$router.push('/about')"><slot>إدارة الوكلاء</slot></Button>
+                </div>
+                <div class="col-md-2 col">
+                <Button :lightGreen="true"><slot>البيانات الشخصية</slot></Button>
+                </div>
+                <div class="col-md-2 col">
+                <Button :darkYellow="true"><slot>طلب تنفيذ جديد</slot></Button>
+                </div>
+            </div>
+            
+            
         </div>
     </div>
     <!-- stats start -->
-        <Stats />
+    <div class="row py-3 m-auto justify-content-center g-3">
+        <Stats>
+            <template #icon><i class="bi bi-journal-medical fs-1"></i></template>
+            <template #num>5195</template>
+            <template #desc>طلباتي</template>
+        </Stats>
+        <Stats>
+            <template #icon><i class="bi bi-journal-medical fs-1"></i></template>
+            <template #num>5195</template>
+            <template #desc>طلباتي</template>
+        </Stats>
+        <Stats>
+            <template #icon><i class="bi bi-journal-medical fs-1"></i></template>
+            <template #num>5195</template>
+            <template #desc>طلباتي</template>
+        </Stats>
+        <Stats>
+            <template #icon><i class="bi bi-journal-medical fs-1"></i></template>
+            <template #num>5195</template>
+            <template #desc>طلباتي</template>
+        </Stats>
+        <Stats>
+            <template #icon><i class="bi bi-journal-medical fs-1"></i></template>
+            <template #num>5195</template>
+            <template #desc>طلباتي</template>
+            <template #error>حدث خطأ</template>
+        </Stats>
+        <Stats>
+            <template #icon><i class="bi bi-journal-medical fs-1"></i></template>
+            <template #desc>طلباتي</template>
+        </Stats>
+    </div>
     <h4 class="border-top pt-3 my-3">قائمة الطلبات</h4>  
     <!-- search area -->
     <SearchArea />
@@ -32,5 +73,8 @@ import ShowData from '@/components/ShowData/index.vue'
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/styles/btn'
+@import '@/assets/styles/commonStyles';
+    i{
+        color: $lightGreen;
+    }
 </style>

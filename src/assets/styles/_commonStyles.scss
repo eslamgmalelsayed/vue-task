@@ -1,7 +1,20 @@
 // colors
-$mainColor: #448E8D;
-$bgColor: #FAF9F4;
+$mainColor: #158E8D;
+$darkerGreen: #02363D;
+$lightGreen: #36C5BA;
+$darkYellow:#D1BD7D;
+$redColor : #FF0000;
 $borderColor: #7FD9D3;
+$borderRadius: 5px;
+$bgColor: #FAF9F4;
+// heading
+h4{
+    font-size: 30px;
+    font-weight: bold;
+    color: $darkerGreen;
+
+}
 // fonts
+
 // other
 // $boxShadow: 0px 3px 6px 2px rgba(167,150,150,0.22);

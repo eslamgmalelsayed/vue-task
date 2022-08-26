@@ -43,7 +43,6 @@ const showModal = ref(false)
 </script>
 
 <style scoped lang="scss">
-@import '@/assets/styles/btn';
 // btn size
 @media(max-width:1024px) {
     .btn-size{
