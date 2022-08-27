@@ -14,11 +14,11 @@ export const useUsersStore = defineStore({
         },
         //  delete
         delete(orderId) {
-            this.users = this.users.filter(user => user.orderId != orderId)
+            this.filtered = this.filtered.filter(user => user.orderId != orderId)
         },
         //  clear
         clear() {
-            this.users = []
+            this.filtered = []
         }
     }
     })

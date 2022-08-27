@@ -1,19 +1,16 @@
 <template>
   <NavBar />
   <div class="container py-5">
-  <RouterView />
+    <RouterView />
   </div>
   <Footer />
 </template>
 
 <script setup>
 // imports
-import NavBar from '@/components/Layout/NavBar.vue'
-import Home from '@/views/Home/index.vue'
-import Footer from '@/components/Layout/Footer.vue'
-
+import NavBar from "@/components/Layout/NavBar.vue";
+import Home from "@/views/Home/index.vue";
+import Footer from "@/components/Layout/Footer.vue";
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>
