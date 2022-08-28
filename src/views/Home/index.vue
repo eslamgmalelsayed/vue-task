@@ -69,7 +69,7 @@ import Button from "@/components/Button/index.vue";
 import Stats from "@/components/Stats/index.vue";
 import SearchArea from "@/components/SearchArea/index.vue";
 import ShowData from "@/components/ShowData/index.vue";
-import CustomStat from "../../components/customStat/index.vue";
+import CustomStat from "@/components/customStat/index.vue";
 </script>
 
 <style lang="scss" scoped>

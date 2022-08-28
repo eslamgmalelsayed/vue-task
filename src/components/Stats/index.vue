@@ -18,7 +18,7 @@
 <script setup></script>
 
 <style lang="scss" scoped>
-@import "../../assets/styles/commonStyles";
+@import "@/assets/styles/commonStyles";
 .custom-card {
   border: 1px solid $lightGreen;
   background: #f7fbfb;

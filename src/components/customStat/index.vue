@@ -10,7 +10,7 @@
 <script setup></script>
 
 <style lang="scss" scoped>
-@import "../../assets/styles/commonStyles";
+@import "@/assets/styles/commonStyles";
 .custom-card {
   background: #faf9f3;
   min-height: 125px;
